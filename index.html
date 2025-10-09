@@ -90,7 +90,7 @@
       margin-bottom: 50px;
     }
 
-    .pub-image img {
+    .pub-video video {
       width: 360px;
       border-radius: 10px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.15);
@@ -156,7 +156,7 @@
         margin-top: 20px;
       }
 
-      .pub-image img {
+      .pub-video video {
         width: 100%;
       }
     }
@@ -199,8 +199,11 @@
     <h2>Publications</h2>
 
     <div class="pub-item">
-      <div class="pub-image">
-        <img src="Media1.mp4" alt="Know Where You’re Uncertain Publication Figure">
+      <div class="pub-video">
+        <video controls poster="poster-image.jpg">
+          <source src="Media1.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
       </div>
 
       <div class="pub-info">
