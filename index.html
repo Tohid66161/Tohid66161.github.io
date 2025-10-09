@@ -13,6 +13,8 @@
       background-color: #f9f9f9;
       color: #222;
     }
+
+    /* --- Bio Section --- */
     .container {
       max-width: 900px;
       margin: 50px auto;
@@ -25,16 +27,20 @@
       border-radius: 12px;
       box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     }
+
     .bio {
       flex: 1;
     }
+
     .bio a {
       color: #1a73e8;
       text-decoration: none;
     }
+
     .bio a:hover {
       text-decoration: underline;
     }
+
     .avatar {
       width: 200px;
       height: 200px;
@@ -42,20 +48,123 @@
       object-fit: cover;
       border: 3px solid #1a73e8;
     }
+
     .links {
       margin-top: 20px;
     }
+
     .links a {
       margin-right: 15px;
       color: #1a73e8;
       text-decoration: none;
     }
+
     .links a:hover {
       text-decoration: underline;
     }
+
+    /* --- Publications Section --- */
+    .publications {
+      max-width: 1000px;
+      margin: 60px auto;
+      background: #fff;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+
+    .publications h2 {
+      font-size: 1.8rem;
+      color: #111;
+      margin-bottom: 30px;
+      border-bottom: 3px solid #1a73e8;
+      display: inline-block;
+      padding-bottom: 6px;
+    }
+
+    .pub-item {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      gap: 30px;
+      margin-bottom: 50px;
+    }
+
+    .pub-image img {
+      width: 360px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .pub-info {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .pub-info h3 a {
+      color: #1a73e8;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .pub-info h3 a:hover {
+      text-decoration: underline;
+    }
+
+    .pub-authors {
+      margin: 6px 0;
+      font-size: 0.95rem;
+      color: #333;
+    }
+
+    .pub-details {
+      font-style: italic;
+      color: #444;
+    }
+
+    .pub-details .highlight {
+      color: #d93025;
+      font-weight: 600;
+    }
+
+    .pub-links {
+      margin: 10px 0 15px 0;
+      color: #444;
+    }
+
+    .pub-links a {
+      color: #1a73e8;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .pub-links a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .pub-item {
+        flex-direction: column;
+      }
+
+      .avatar {
+        margin-top: 20px;
+      }
+
+      .pub-image img {
+        width: 100%;
+      }
+    }
   </style>
 </head>
+
 <body>
+  <!-- Bio Section -->
   <div class="container">
     <div class="bio">
       <h1>Tohid Kargar Tasooji</h1>
@@ -84,5 +193,40 @@
       <img src="photo.jpg" alt="Tohid Kargar Tasooji" class="avatar">
     </div>
   </div>
+
+  <!-- Publications Section -->
+  <section class="publications">
+    <h2>Publications</h2>
+
+    <div class="pub-item">
+      <div class="pub-image">
+        <img src="Media1.mp4" alt="Know Where You’re Uncertain Publication Figure">
+      </div>
+
+      <div class="pub-info">
+        <h3>
+          <a href="#" target="_blank">
+            Distributed Fault-Tolerant Multi-Robot Cooperative Localization in Adversarial Environments
+          </a>
+        </h3>
+        <p class="pub-authors">
+          <strong>Tohid Kargar Tasooji*</strong>, Ramviyas Parasuraman
+        </p>
+        <p class="pub-details">
+          <em>2025 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2025)</em>.
+        </p>
+        <p class="pub-links">
+          [ <a href="#" target="_blank">Paper</a> /
+            <a href="#" target="_blank">Webpage</a> /
+            <a href="#" target="_blank">Video</a> /
+            <a href="#" target="_blank">Interactive Demo</a> /
+            <a href="#" target="_blank">Code</a> ]
+        </p>
+        <p>
+          In multi-robot systems (MRS), cooperative localization is a crucial task for enhancing system robustness and scalability, especially in GPS-denied or communication-limited environments. However, adversarial attacks, such as sensor manipulation, and communication jamming, pose significant challenges to the performance of traditional localization methods. In this paper, we propose a novel distributed fault-tolerant cooperative localization framework to enhance resilience against sensor and communication disruptions in adversarial environments. We introduce an adaptive event-triggered communication strategy that dynamically adjusts communication thresholds based on real-time sensing and communication quality. This strategy ensures optimal performance even in the presence of sensor degradation or communication failure. Furthermore, we conduct a rigorous analysis of the convergence and stability properties of the proposed algorithm, demonstrating its resilience against bounded adversarial zones and maintaining accurate state estimation. Robotarium-based experiment results show that our proposed algorithm significantly outperforms traditional methods in terms of localization accuracy and communication efficiency, particularly in adversarial settings. Our approach offers improved scalability, reliability, and fault tolerance for MRS, making it suitable for large-scale deployments in real-world, challenging environments.
+        </p>
+      </div>
+    </div>
+  </section>
 </body>
 </html>
