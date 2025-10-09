@@ -1,159 +1,88 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Tohid Kargar Tasooji — Robotics & Control</title>
-
-  <!-- Google font (optional) -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tohid Kargar Tasooji</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #222;
+    }
+    .container {
+      max-width: 900px;
+      margin: 50px auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .bio {
+      flex: 1;
+    }
+    .bio a {
+      color: #1a73e8;
+      text-decoration: none;
+    }
+    .bio a:hover {
+      text-decoration: underline;
+    }
+    .avatar {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #1a73e8;
+    }
+    .links {
+      margin-top: 20px;
+    }
+    .links a {
+      margin-right: 15px;
+      color: #1a73e8;
+      text-decoration: none;
+    }
+    .links a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-  <header class="topbar">
-    <div class="container topbar-inner">
-      <div class="brand">
-        <h1>Tohid Kargar Tasooji</h1>
-        <p class="role">Postdoctoral Research Fellow — Robotics & Control</p>
+  <div class="container">
+    <div class="bio">
+      <h1>Tohid Kargar Tasooji</h1>
+      <p>
+        I am currently a Postdoctoral Research Fellow at the 
+        <a href="https://hero.uga.edu/" target="_blank">Heterogeneous Robotics (HeRo) Research Lab</a>, 
+        working with Prof. Ramviyas Parasuraman at the 
+        <a href="https://www.uga.edu/" target="_blank">University of Georgia</a>. I am developing advanced algorithms for multi-robot systems, focusing on resilient cooperative localization, communication-aware coverage, and learning-enabled control strategies for autonomous navigation in dynamic and adversarial environments. My work integrates event-triggered control, model predictive frameworks, and hierarchical decision-making to enhance the robustness, safety, and efficiency of heterogeneous robotic teams.
+      </p>
+      <p>
+        I received my PhD in Control and Robotic Engineering from the 
+        <a href="https://www.ualberta.ca/" target="_blank">University of Alberta</a> in 2023. During my PhD, I led efforts in the Advanced Control Systems Lab, working on event-triggered cooperative control and localization for multi-robot systems, designing resilient and secure control schemes, and developing real-time algorithms for autonomous navigation and multi-agent coordination.
+      </p>
+      <p>
+        I also worked at <a href="https://www.gm.com/" target="_blank">General Motors</a>, where I developed algorithms for vehicle dynamics, autonomous driving, and ADAS features, including route optimization, model-based control strategies, and simulation-based testing using MIL, SIL, and HIL environments.
+      </p>
+
+      <div class="links">
+        <a href="mailto:Tohid.KargarTasooji@uga.edu">Email</a> /
+        <a href="https://scholar.google.com/">Google Scholar</a> /
+        <a href="https://www.linkedin.com/">LinkedIn</a> /
+        <a href="#">CV</a>
       </div>
-
-      <nav class="topnav" aria-label="Primary">
-        <a href="#about">About</a>
-        <a href="#research">Research</a>
-        <a href="#experience">Experience</a>
-        <a href="#pubs">Publications</a>
-        <a href="#teaching">Teaching</a>
-        <a href="#contact">Contact</a>
-      </nav>
     </div>
-  </header>
-
-  <main class="container layout">
-    <!-- SIDEBAR -->
-    <aside class="sidebar">
-      <img class="avatar" src="photo.jpg" alt="Tohid Kargar Tasooji">
-      <h2 class="small-title">Contact</h2>
-      <p class="muted">
-        2400 Lexington Road<br>
-        Athens, GA 30605, USA<br>
-        <a href="mailto:Tohid.KargarTasooji@uga.edu">Tohid.KargarTasooji@uga.edu</a><br>
-        +1 (706) 240-4627
-      </p>
-
-      <h2 class="small-title">Quick links</h2>
-      <ul class="links">
-        <li><a href="https://hero.uga.edu/" target="_blank" rel="noopener">HeRo Research Lab</a></li>
-        <li><a href="https://www.uga.edu/" target="_blank" rel="noopener">University of Georgia</a></li>
-        <li><a href="https://www.ualberta.ca/" target="_blank" rel="noopener">University of Alberta</a></li>
-        <li><a href="https://github.com/Tohid66161" target="_blank" rel="noopener">GitHub</a></li>
-        <li><a href="https://scholar.google.com/" target="_blank" rel="noopener">Google Scholar</a></li>
-      </ul>
-
-      <h2 class="small-title">Skills</h2>
-      <p class="muted small">
-        MPC · Event-triggered control · Multi-robot localization · ROS · MATLAB · Python · C/C++ · SIL/HIL
-      </p>
-    </aside>
-
-    <!-- MAIN CONTENT -->
-    <section class="content">
-      <section id="about" class="card">
-        <h2>About</h2>
-        <p class="lead">
-          I am currently a Postdoctoral Research Fellow at the
-          <a href="https://hero.uga.edu/" target="_blank" rel="noopener">Heterogeneous Robotics (HeRo) Research Lab</a>,
-          working with Prof. Ramviyas Parasuraman at the
-          <a href="https://www.uga.edu/" target="_blank" rel="noopener">University of Georgia</a>.
-          I develop advanced algorithms for multi-robot systems, focusing on resilient cooperative localization,
-          communication-aware coverage, and learning-enabled control strategies for autonomous navigation in dynamic
-          and adversarial environments. My work integrates event-triggered control, model predictive frameworks, and
-          hierarchical decision-making to enhance robustness, safety, and efficiency of heterogeneous robotic teams.
-        </p>
-
-        <p>
-          I received my PhD in Control and Robotic Engineering from the
-          <a href="https://www.ualberta.ca/" target="_blank" rel="noopener">University of Alberta</a> in 2023. During my PhD,
-          I led projects in the Advanced Control Systems Lab on event-triggered cooperative control, secure localization,
-          and real-time multi-agent coordination.
-        </p>
-
-        <p>
-          I also worked at <a href="https://www.gm.com/" target="_blank" rel="noopener">General Motors</a>, developing algorithms
-          for vehicle dynamics, autonomous driving, and ADAS features, including route optimization, model-based control,
-          and MIL/SIL/HIL simulation testing.
-        </p>
-      </section>
-
-      <section id="research" class="card">
-        <h2>Research Interests</h2>
-        <ul>
-          <li>Multi-Robot Systems — cooperative control, localization, decision-making</li>
-          <li>Control Theory — event-triggered, nonlinear, model predictive control</li>
-          <li>Autonomy — path planning, swarm robotics, ADAS, cooperative perception</li>
-          <li>Cybersecurity for Control Systems — secure control under attacks</li>
-          <li>Machine Learning & AI — learning-enabled control, sensor fusion</li>
-        </ul>
-      </section>
-
-      <section id="experience" class="card">
-        <h2>Experience</h2>
-
-        <article class="job">
-          <h3>Postdoctoral Research Fellow — University of Georgia</h3>
-          <p class="muted">Aug 2024 — Present</p>
-          <ul>
-            <li>Improving robustness of multi-robot localization in sparse/dense and adversarial environments.</li>
-            <li>Cooperative perception for connected and automated vehicles; communication-aware coverage control.</li>
-            <li>Designed Cubature Kalman Filter implementations and hierarchical LLMs in-the-loop for target tracking.</li>
-          </ul>
-        </article>
-
-        <article class="job">
-          <h3>Postdoctoral Research Fellow — Toronto Metropolitan University</h3>
-          <p class="muted">Feb 2024 — Aug 2024</p>
-          <ul>
-            <li>Event-based NMPC for multi-robot payload transport and ROS/Gazebo integration for testing.</li>
-          </ul>
-        </article>
-
-        <article class="job">
-          <h3>Algorithm Design & Development Engineer / ADAS Intern — General Motors</h3>
-          <p class="muted">June 2022 — Jan 2024</p>
-          <ul>
-            <li>Vehicle dynamics algorithms, route optimization, MIL/SIL/HIL test development, SDV migration support.</li>
-          </ul>
-        </article>
-      </section>
-
-      <section id="pubs" class="card">
-        <h2>Selected Publications</h2>
-        <ol>
-          <li>T. Kargar Tasooji & R. Parasuraman, “Distributed Fault-Tolerant Multi-Robot Cooperative Localization in Adversarial Environments,” IROS 2025.</li>
-          <li>T. Kargar Tasooji & H. J. Marquez, “Event-Triggered Consensus Control for Multi-Robot Systems,” IEEE Trans. Ind. Electron., 2022.</li>
-          <li>T. Kargar Tasooji & H. J. Marquez, “Cooperative Localization in Mobile Robots Using Event-Triggered Mechanism,” IEEE Trans. Autom. Sci. Eng., 2022.</li>
-        </ol>
-        <p><a href="#" class="btn">View full publications</a></p>
-      </section>
-
-      <section id="teaching" class="card">
-        <h2>Teaching & Mentoring</h2>
-        <p class="muted">TA and mentoring experience at the University of Alberta (Modern Control, Control Systems II, Fundamentals)</p>
-      </section>
-
-      <section id="contact" class="card">
-        <h2>Contact</h2>
-        <p>If you'd like to collaborate, invite me to speak, or request a copy of my CV, please email me at
-          <a href="mailto:Tohid.KargarTasooji@uga.edu">Tohid.KargarTasooji@uga.edu</a>.
-        </p>
-      </section>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <small>© 2025 Tohid Kargar Tasooji</small>
+    <div class="photo">
+      <img src="photo.jpg" alt="Tohid Kargar Tasooji" class="avatar">
     </div>
-  </footer>
+  </div>
 </body>
 </html>
