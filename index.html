@@ -1,71 +1,212 @@
-<style>
-  /* Add these styles (you can merge with your existing CSS) */
-  .section {
-    max-width: 1000px;
-    margin: 60px auto;
-    background: #fff;
-    padding: 40px;
-    border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-  }
-  .section h2 {
-    font-size: 1.8rem;
-    color: #111;
-    margin-bottom: 24px;
-    border-bottom: 3px solid #1a73e8;
-    display: inline-block;
-    padding-bottom: 6px;
-  }
-
-  /* Unified item layout: media column + info column */
-  .item-grid {
-    display: grid;
-    grid-template-columns: 360px 1fr; /* media | info */
-    gap: 22px;
-    align-items: start;
-    margin-bottom: 28px;
-  }
-
-  .media-column {
-    width: 100%;
-    max-width: 360px;
-  }
-
-  .media-column img,
-  .media-column video {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    display: block;
-  }
-
-  .info-column h3 {
-    margin: 0 0 6px 0;
-  }
-
-  .info-column .pub-details {
-    font-style: italic;
-    color: #444;
-    margin: 6px 0;
-  }
-
-  .info-column .pub-links { margin: 10px 0 14px 0; }
-
-  /* Keep paragraphs readable */
-  .info-column p { color:#333; font-size:0.92rem; line-height:1.45; margin: 8px 0; }
-
-  /* Responsive: stack on narrow screens */
-  @media (max-width: 860px) {
-    .item-grid {
-      grid-template-columns: 1fr;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tohid Kargar Tasooji</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #222;
     }
-    .media-column {
+
+    /* --- Bio Section --- */
+    .container {
+      max-width: 1000px;
+      margin: 50px auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1px;
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .bio {
+      flex: 1;
+    }
+
+    .bio a {
+      color: #1a73e8;
+      text-decoration: none;
+    }
+
+    .bio a:hover {
+      text-decoration: underline;
+    }
+
+    .avatar {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #1a73e8;
+    }
+
+    .links {
+      margin-top: 20px;
+    }
+
+    .links a {
+      margin-right: 15px;
+      color: #1a73e8;
+      text-decoration: none;
+    }
+
+    .links a:hover {
+      text-decoration: underline;
+    }
+
+    /* --- Publications Section --- */
+    .publications {
+      max-width: 1000px;
+      margin: 60px auto;
+      background: #fff;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+
+    .publications h2 {
+      font-size: 1.8rem;
+      color: #111;
+      margin-bottom: 30px;
+      border-bottom: 3px solid #1a73e8;
+      display: inline-block;
+      padding-bottom: 6px;
+    }
+
+    .pub-item {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      gap: 1px;
+      margin-bottom: 1px;
+    }
+
+    .pub-video video {
+      width: 360px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
       max-width: 100%;
-      margin: 0 auto;
+      height: auto;
     }
-  }
-</style>
+
+    .pub-info {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .pub-info h3 a {
+      color: #1a73e8;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .pub-info h3 a:hover {
+      text-decoration: underline;
+    }
+
+    .pub-authors {
+      margin: 6px 0;
+      font-size: 0.95rem;
+      color: #333;
+    }
+
+    .pub-details {
+      font-style: italic;
+      color: #444;
+    }
+
+    .pub-details .highlight {
+      color: #d93025;
+      font-weight: 600;
+    }
+
+    .pub-links {
+      margin: 10px 0 15px 0;
+      color: #444;
+    }
+
+    .pub-links a {
+      color: #1a73e8;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .pub-links a:hover {
+      text-decoration: underline;
+    }
+
+    /* --- Generic section (used for featured projects to match publications) --- */
+    .section {
+      max-width: 1000px;
+      margin: 60px auto;
+      background: #fff;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+
+    .section h2 {
+      font-size: 1.8rem;
+      color: #111;
+      margin-bottom: 30px;
+      border-bottom: 3px solid #1a73e8;
+      display: inline-block;
+      padding-bottom: 6px;
+    }
+
+    /* Make featured videos match publication video sizing */
+    .featured-projects .pub-video video {
+      width: 360px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 1000px) {
+      .container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .pub-item {
+        flex-direction: column;
+      }
+
+      .avatar {
+        margin-top: 20px;
+      }
+
+      .pub-video video,
+      .featured-projects .pub-video video {
+        width: 100%;
+      }
+    }
+
+    /* small screens */
+    @media (max-width: 680px) {
+      .container, .publications, .section {
+        margin: 24px;
+        padding: 24px;
+      }
+
+      .avatar {
+        width: 160px;
+        height: 160px;
+      }
+    }
+  </style>
+</head>
 
 <body>
   <!-- Bio Section -->
@@ -831,17 +972,44 @@ large-scale environments.
           <a href="#" target="_blank" rel="noopener">Code</a> ]
       </p>
 
-      <div style="margin-top:8px; color:#333; font-size:0.92rem; line-height:1.45;">
+     <div style="color:#333; font-size:0.72rem; line-height:1.45;">
         <p>
-          In Search and Rescue missions, robots must operate in cluttered environments with limited sensing and communication. The challenge is to efficiently explore unknown areas while minimizing redundant coverage, ensure reliable and low-latency victim detection, and maintain safe, collision-free navigation with smooth recovery when stuck.
+          In Search and Rescue missions, robots must operate in cluttered environments with limited sensing and communication. The challenge is to efficiently explore unknown areas while minimizing redundant coverage, ensure reliable and low-latency victim detection, and maintain safe, collision-free navigation with smooth recovery when stuck.           Our goal is to design a robust, plug-and-play system that runs in Webots using standard differential-drive robots, enabling scalable deployment in realistic search-and-rescue scenarios. The approach combines cooperative exploration, consensus-based rendezvous, and robust safety control. Each robot maintains a grid map, sharing with teammates to coordinate coverage. Victim detection has the highest priority—robots navigate to the detected victim’s world position or visually track it until depth data is available. Safety mechanisms include short-range braking, mid-field CBF with LiDAR, and stuck detection for autonomous recovery.
         </p>
         <p>
-          Our goal is to design a robust, plug-and-play system that runs in Webots using standard differential-drive robots, enabling scalable deployment in realistic search-and-rescue scenarios. The approach combines cooperative exploration, consensus-based rendezvous, and robust safety control. Each robot maintains a grid map, sharing with teammates to coordinate coverage. Victim detection has the highest priority—robots navigate to the detected victim’s world position or visually track it until depth data is available. Safety mechanisms include short-range braking, mid-field CBF with LiDAR, and stuck detection for autonomous recovery.
         </p>
       </div>
     </div>
   </div>
 </section>
+
+  
+<section class="section outreach" aria-labelledby="outreach-heading">
+  <h2 id="outreach-heading">Outreach & Industry Engagement</h2>
+
+  <div class="pub-item" style="margin-bottom:24px;">
+    <!-- Outreach Image -->
+    <div class="pub-video">
+      <img src="image16.jpg" alt="University of Georgia and GNEM visit to Beep, Inc." 
+           style="width:360px; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,0.15); max-width:100%; height:auto;">
+    </div>
+
+    <!-- Outreach Info -->
+    <div class="pub-info">
+      <h3>Industry Visit — Beep, Inc.</h3>
+      <p class="pub-details"><em>May 2025</em></p>
+      <div style="margin-top:8px; color:#333; font-size:0.92rem; line-height:1.5;">
+        In May 2025, I joined with colleagues from the 
+        <a href="https://www.uga.edu/" target="_blank">University of Georgia</a> and members of the 
+        <a href="https://www.gnem.org/" target="_blank">Georgia Network for Electric Mobility (GNEM)</a> 
+        for a site visit to <a href="https://www.go-beep.com/" target="_blank">Beep, Inc.</a>. 
+        During the visit, they discussed opportunities to establish research partnerships and 
+        develop innovative autonomous mobility solutions that advance sustainable and intelligent transportation systems.
+      </div>
+    </div>
+  </div>
+</section>
+
 
 
 </body>
