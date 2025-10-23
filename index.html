@@ -890,42 +890,58 @@ large-scale environments.
 </section>
 
 
-  <section class="Featured Projects">
-    <h2>Publications</h2>
+  <section class="section featured-projects" aria-labelledby="featured-projects-heading">
+  <h2 id="featured-projects-heading">Featured Projects</h2>
 
-    <div class="pub-item">
-      <div class="pub-video">
-                <video width="640" height="200" controls>
-      <source src="Media14.mp4" type="video/mp4">
-      <source src="Media15.mp4" type="video/mp4">
-      </video>
+  <div class="pub-item" style="margin-bottom:24px;">
+    <!-- Videos: side-by-side on wide screens, stacked on narrow screens -->
+    <div class="pub-video" style="display:flex; gap:12px; flex-wrap:wrap; margin-right:16px;">
+      <!-- Video 1 -->
+      <div style="flex:1; min-width:260px;">
+        <video controls style="width:100%; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,0.15);">
+          <source src="Media14.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
       </div>
 
-      <div class="pub-info">
-        <h3>
-          <a href="#" target="_blank">
-            Multi-UGV Search-and-Rescue
-          </a>
-        </h3>
-        </p>
-        <p class="pub-details">
-          <em>IEEE SMCS Open Source AI-Empowered Human-Machine Teaming (HMT) Competition</em>.
-        </p>
-        <p class="pub-links">
-          [ <a href="#" target="_blank">Paper</a> /
-            <a href="#" target="_blank">Webpage</a> /
-            <a href="#" target="_blank">Video</a> /
-            <a href="#" target="_blank">Interactive Demo</a> /
-            <a href="#" target="_blank">Code</a> ]
-        </p>
-        <p>
-         <div style="margin-top:8px; color:#333; font-size:0.72rem; line-height:1.45;">
-          In Search and Rescue missions, robots must operate in cluttered environments with limited sensing and communication. The challenge is to efficiently explore unknown areas while minimizing redundant coverage, ensure reliable and low-latency victim detection, and maintain safe, collision-free navigation with smooth recovery when stuck. Our goal is to design a robust, plug-and-play system that runs in Webots using standard differential-drive robots, enabling scalable deployment in realistic search and Rescue  scenarios. Our approach combines cooperative exploration, consensus-based rendezvous, and robust safety control. Each robot maintains a grid map, marking explored areas and sharing them with teammates to coordinate coverage. Initially, robots move toward a consensus centroid to merge maps, then disperse using a repulsive strategy while targeting unexplored regions. Victim detection has the highest priority—robots navigate to the detected victim’s world position or visually track it until depth data is available. For safety, short-range braking, mid-field control barrier functions (CBF) with LiDAR, and stuck detection ensure collision-free motion, autonomous recovery, and stable operation in cluttered environments.
-        </p>
+      <!-- Video 2 -->
+      <div style="flex:1; min-width:260px;">
+        <video controls style="width:100%; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,0.15);">
+          <source src="Media15.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
       </div>
     </div>
 
-  </section>
+    <!-- Project Info -->
+    <div class="pub-info" style="min-width:300px;">
+      <h3>
+        <a href="#" target="_blank" rel="noopener">Multi-UGV Search-and-Rescue</a>
+      </h3>
+
+      <p class="pub-details">
+        <em>IEEE SMCS Open Source AI-Empowered Human-Machine Teaming (HMT) Competition</em>.
+      </p>
+
+      <p class="pub-links">
+        [ <a href="#" target="_blank" rel="noopener">Paper</a> /
+          <a href="#" target="_blank" rel="noopener">Webpage</a> /
+          <a href="#" target="_blank" rel="noopener">Video</a> /
+          <a href="#" target="_blank" rel="noopener">Interactive Demo</a> /
+          <a href="#" target="_blank" rel="noopener">Code</a> ]
+      </p>
+
+      <div style="margin-top:8px; color:#333; font-size:0.92rem; line-height:1.45;">
+        <p>
+          In Search and Rescue missions, robots must operate in cluttered environments with limited sensing and communication. The challenge is to efficiently explore unknown areas while minimizing redundant coverage, ensure reliable and low-latency victim detection, and maintain safe, collision-free navigation with smooth recovery when stuck.
+        </p>
+        <p>
+          Our goal is to design a robust, plug-and-play system that runs in Webots using standard differential-drive robots, enabling scalable deployment in realistic search-and-rescue scenarios. The approach combines cooperative exploration, consensus-based rendezvous, and robust safety control. Each robot maintains a grid map, sharing with teammates to coordinate coverage. Victim detection has the highest priority—robots navigate to the detected victim’s world position or visually track it until depth data is available. Safety mechanisms include short-range braking, mid-field CBF with LiDAR, and stuck detection for autonomous recovery.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
 </body>
 </html>
