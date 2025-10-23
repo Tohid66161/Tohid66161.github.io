@@ -894,27 +894,23 @@ large-scale environments.
   <h2 id="featured-projects-heading">Featured Projects</h2>
 
   <div class="pub-item" style="margin-bottom:24px;">
-    <!-- Videos: side-by-side on wide screens, stacked on narrow screens -->
-    <div class="pub-video" style="display:flex; gap:12px; flex-wrap:wrap; margin-right:16px;">
+    <!-- Videos stacked vertically -->
+    <div class="pub-video" style="display:flex; flex-direction:column; gap:16px; align-items:center; margin-bottom:20px;">
       <!-- Video 1 -->
-      <div style="flex:1; min-width:260px;">
-        <video controls style="width:100%; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,0.15);">
-          <source src="Media14.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-      </div>
+      <video controls style="width:90%; max-width:700px; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,0.15);">
+        <source src="Media14.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
 
       <!-- Video 2 -->
-      <div style="flex:1; min-width:260px;">
-        <video controls style="width:100%; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,0.15);">
-          <source src="Media15.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-      </div>
+      <video controls style="width:90%; max-width:700px; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,0.15);">
+        <source src="Media15.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
     </div>
 
     <!-- Project Info -->
-    <div class="pub-info" style="min-width:300px;">
+    <div class="pub-info" style="max-width:900px; margin:auto;">
       <h3>
         <a href="#" target="_blank" rel="noopener">Multi-UGV Search-and-Rescue</a>
       </h3>
@@ -942,6 +938,7 @@ large-scale environments.
     </div>
   </div>
 </section>
+
 
 </body>
 </html>
