@@ -540,11 +540,7 @@ Transportation with Multi-Quadrotors
           <em> Submitted to the 2026 International Conference on Robotics and Automation (ICRA 2026)</em>.
         </p>
         <p class="pub-links">
-          [ <a href="#" target="_blank">Paper</a> /
-            <a href="#" target="_blank">Webpage</a> /
-            <a href="#" target="_blank">Video</a> /
-            <a href="#" target="_blank">Interactive Demo</a> /
-            <a href="#" target="_blank">Code</a> ]
+          [ <a href="https://arxiv.org/abs/2504.03123" target="_blank">Paper</a>  ]
         </p>
         <p>
         <div style="margin-top:8px; color:#333; font-size:0.72rem; line-height:1.45;">
@@ -663,33 +659,33 @@ multi-robot navigation in uncertain environments.      </p>
         </p>
         <p>
         <div style="margin-top:8px; color:#333; font-size:0.72rem; line-height:1.45;">
-Multi-robot systems operating in dynamic and adversarial
-environments face challenges such as communication
-disruptions, sensor failures, and cyberattacks, compromising
-navigation, safety, and coordination. This paper proposes a decentralized
-resilience framework that integrates Reinforcement
-Learning (RL) with Control Barrier Functions (CBFs) to enable
-adaptive and safe navigation under adversarial conditions.
-First, we introduce a probabilistic adversary model based on
-a radially symmetric Gaussian-like distribution. This model
-allows each robot to estimate adversarial region parameters
-via likelihood maximization and refine these estimates through
-collaborative consensus with neighboring agents. Second, we develop
-an RL-based control framework augmented with a CBFbased
-safety mechanism to ensure real-time policy adaptation
-while enforcing safety constraints. During exploration, robots
-actively navigate adversarial regions to learn their characteristics.
-In the exploitation phase, they leverage the learned policy
-to achieve task objectives while maintaining safety guarantees.
-Multi-robot experiments validate the proposed framework’s
-ability to ensure system stability, enforce safety constraints, and
-dynamically adapt trajectories in GPS-denied and adversarial
-environments. The results demonstrate superior performance
-over state-of-the-art baselines, showcasing the effectiveness
-of integrating probabilistic adversary modeling, decentralized
-situational awareness, and adaptive safety-aware control, ultimately
-paving the way for key advances in realizing resilient
-multi-robot navigation in uncertain environments.      </p>
+Multi-robot coordination requires robots to share
+or obtain their position information using sensors. However, the
+uncertainty in these position measurements is generally ignored
+in tight consensus-based coordination protocols like rendezvous,
+formation control, and role assignments. This paper presents
+a novel Wasserstein-based consensus control law for robust
+multi-robot consensus-based coordination, accounting for localization
+uncertainty. Our primary contribution lies in explicitly
+modeling each robot’s position as a Gaussian distribution and
+incorporating theWasserstein distance into the control law. This
+uncertainty-aware formulation ensures robust performance by
+mitigating the effects of sensor noise and guarantees exponential
+convergence to a consensus equilibrium under realistic conditions.
+We further contribute a rigorous convergence analysis
+that establishes a lower bound on the convergence rate as a
+function of uncertainty bounds and network topology. Extensive
+simulations conducted in the Robotarium environment validate
+the scalability and efficacy of our approach, demonstrating that
+it outperforms traditional Euclidean distance-based controllers,
+particularly in high-uncertainty settings. The proposed method
+consistently maintains sub-meter consensus convergence accuracy
+and achieves stable formation shapes based on consensus
+across various geometries and team sizes. These contributions
+provide a practical means to incorporate uncertainty into
+consensus controllers, demonstrating effectiveness in multirobot
+coordination for time-critical applications such as search
+and rescue, exploration, and coordinated surveillance.      </p>
       </div>
     </div>
 
